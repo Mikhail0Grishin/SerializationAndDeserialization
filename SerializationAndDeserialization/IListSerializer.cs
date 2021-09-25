@@ -8,8 +8,5 @@ namespace SerializationAndDeserialization
         Task Serialize(ListNode head, Stream s);
 
         Task<ListNode> Deserialaze(Stream s);
-
-        Task<ListNode> DeepCopy(ListNode head);
-
     }
 }
