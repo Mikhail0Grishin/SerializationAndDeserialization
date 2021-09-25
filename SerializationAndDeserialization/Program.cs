@@ -7,7 +7,7 @@ namespace SerializationAndDeserialization
     {
         static async Task Main(string[] args)
         {
-            
+     
         }
     }
 }

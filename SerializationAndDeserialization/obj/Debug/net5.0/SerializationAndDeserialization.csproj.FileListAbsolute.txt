@@ -1,0 +1,16 @@
+C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\bin\Debug\net5.0\SerializationAndDeserialization.exe
+C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\bin\Debug\net5.0\SerializationAndDeserialization.deps.json
+C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\bin\Debug\net5.0\SerializationAndDeserialization.runtimeconfig.json
+C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\bin\Debug\net5.0\SerializationAndDeserialization.runtimeconfig.dev.json
+C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\bin\Debug\net5.0\SerializationAndDeserialization.dll
+C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\bin\Debug\net5.0\ref\SerializationAndDeserialization.dll
+C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\bin\Debug\net5.0\SerializationAndDeserialization.pdb
+C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\obj\Debug\net5.0\SerializationAndDeserialization.csproj.AssemblyReference.cache
+C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\obj\Debug\net5.0\SerializationAndDeserialization.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\obj\Debug\net5.0\SerializationAndDeserialization.AssemblyInfoInputs.cache
+C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\obj\Debug\net5.0\SerializationAndDeserialization.AssemblyInfo.cs
+C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\obj\Debug\net5.0\SerializationAndDeserialization.csproj.CoreCompileInputs.cache
+C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\obj\Debug\net5.0\SerializationAndDeserialization.dll
+C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\obj\Debug\net5.0\ref\SerializationAndDeserialization.dll
+C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\obj\Debug\net5.0\SerializationAndDeserialization.pdb
+C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\obj\Debug\net5.0\SerializationAndDeserialization.genruntimeconfig.cache
