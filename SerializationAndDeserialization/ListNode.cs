@@ -1,6 +1,6 @@
 ﻿namespace SerializationAndDeserialization
 {
-    class ListNode
+    public class ListNode
     {
         public ListNode Previous;
 

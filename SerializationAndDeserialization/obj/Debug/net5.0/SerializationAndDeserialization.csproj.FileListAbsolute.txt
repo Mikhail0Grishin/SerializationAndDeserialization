@@ -5,7 +5,6 @@ C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDese
 C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\bin\Debug\net5.0\SerializationAndDeserialization.dll
 C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\bin\Debug\net5.0\ref\SerializationAndDeserialization.dll
 C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\bin\Debug\net5.0\SerializationAndDeserialization.pdb
-C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\obj\Debug\net5.0\SerializationAndDeserialization.csproj.AssemblyReference.cache
 C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\obj\Debug\net5.0\SerializationAndDeserialization.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\obj\Debug\net5.0\SerializationAndDeserialization.AssemblyInfoInputs.cache
 C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\obj\Debug\net5.0\SerializationAndDeserialization.AssemblyInfo.cs
@@ -14,3 +13,4 @@ C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDese
 C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\obj\Debug\net5.0\ref\SerializationAndDeserialization.dll
 C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\obj\Debug\net5.0\SerializationAndDeserialization.pdb
 C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\obj\Debug\net5.0\SerializationAndDeserialization.genruntimeconfig.cache
+C:\Users\mihai\source\repos\SerializationAndDeserialization\SerializationAndDeserialization\obj\Debug\net5.0\SerializationAndDeserialization.csproj.AssemblyReference.cache

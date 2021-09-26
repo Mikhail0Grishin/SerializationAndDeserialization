@@ -5,8 +5,9 @@ namespace SerializationAndDeserialization
 {
     interface IListSerializer
     {
-        Task Serialize(ListNode head, Stream s);
+        void Add(ListNode head, ListNode tail, string data);
+        void Serialize(ListNode head, Stream s);
 
-        Task<ListNode> Deserialaze(Stream s);
+        ListNode Deserialaze(Stream s);
     }
 }

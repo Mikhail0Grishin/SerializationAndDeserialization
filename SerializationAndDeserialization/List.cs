@@ -11,7 +11,7 @@ namespace SerializationAndDeserialization
         private int count = 0;
         private ListNode Head { get; set; }
         private ListNode Tail { get; set; }
-
+     
         public ListNode GetHead()
         {
             return Head;
