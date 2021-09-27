@@ -20,7 +20,7 @@ namespace SerializationAndDeserialization
 
             //Stream fStream = new FileStream("MyTest.xml",
             //    FileMode.Create, FileAccess.Write, FileShare.None);
-            //listSerializer.Serialize(ref head, fStream);
+            //listSerializer.Serialize(list.GetHead(), fStream);
 
             List newList = new List();
             Stream fStream = File.OpenRead("MyTest.xml");

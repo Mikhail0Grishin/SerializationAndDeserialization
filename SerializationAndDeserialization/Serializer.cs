@@ -11,6 +11,7 @@ namespace SerializationAndDeserialization
     {
         ListNode Head = new ListNode();
         ListNode Tail = new ListNode();
+
         int id = 0;
         public ListNode GetNode(int id)
         {
@@ -23,7 +24,7 @@ namespace SerializationAndDeserialization
 
             return Tail;
         }
-        public void Serialize(ref ListNode head,Stream s)
+        public void Serialize(ListNode head, Stream s)
         { 
             int index = 0;
             Dictionary<ListNode, int> dict = new Dictionary<ListNode, int>();
@@ -37,6 +38,7 @@ namespace SerializationAndDeserialization
             var writer = XmlWriter.Create(s, settings);
 
             writer.WriteStartElement("root");
+
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(string));
             XmlSerializer xmlSerializerInt = new XmlSerializer(typeof(int));
 
@@ -54,6 +56,7 @@ namespace SerializationAndDeserialization
             int randomId;
             int count = 0;
             int index = 0;
+
             Dictionary<int, Tuple<string, int>> dict = new Dictionary<int, Tuple<string, int>>();       
 
             var reader = XmlReader.Create(s);
@@ -63,6 +66,7 @@ namespace SerializationAndDeserialization
 
             String data = (String)xmlSerializer.Deserialize(reader);
             String randomid = (String)xmlSerializer.Deserialize(reader);
+
             randomId = Convert.ToInt32(randomid) - 1;
 
             while (data != null || randomid != null)
@@ -75,6 +79,7 @@ namespace SerializationAndDeserialization
             }
 
             ListNode currNode = Head;
+
             for (int i = 0; i < count; i++)
             {
                 currNode.Data = dict.ElementAt(i).Value.Item1;
@@ -89,7 +94,7 @@ namespace SerializationAndDeserialization
                     Tail = currNode;
                 }
             }
-            index = 0;
+
             for (ListNode curr = Head; curr.Next != null; curr = curr.Next)
             {
                 curr.Random = GetNode(dict.ElementAt(index).Value.Item2);
