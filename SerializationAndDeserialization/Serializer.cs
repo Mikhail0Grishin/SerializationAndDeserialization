@@ -12,20 +12,20 @@ namespace SerializationAndDeserialization
         ListNode Head = new ListNode();
         ListNode Tail = new ListNode();
 
-        int id = 0;
         public ListNode GetNode(int id)
         {
+            int counter = 0;
             for (ListNode curr = Head; curr.Next != null; curr = curr.Next)
             {
-                if (this.id == id)
+                if (counter == id)
                     return curr;
-                this.id++;
+                counter++;
             }
-
             return Tail;
         }
         public void Serialize(ListNode head, Stream s)
-        { 
+        {
+            Head = head;
             int index = 0;
             Dictionary<ListNode, int> dict = new Dictionary<ListNode, int>();
             for (ListNode currNode = Head; currNode != null; currNode = currNode.Next)
@@ -40,12 +40,11 @@ namespace SerializationAndDeserialization
             writer.WriteStartElement("root");
 
             XmlSerializer xmlSerializer = new XmlSerializer(typeof(string));
-            XmlSerializer xmlSerializerInt = new XmlSerializer(typeof(int));
 
             for (ListNode currNode = Head; currNode != null; currNode = currNode.Next)
             {
                 xmlSerializer.Serialize(writer, currNode.Data);
-                xmlSerializer.Serialize(writer, dict[currNode.Random]);
+                xmlSerializer.Serialize(writer, dict[currNode.Random].ToString());
             }
 
             writer.Close();

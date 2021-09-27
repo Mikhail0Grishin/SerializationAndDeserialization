@@ -1,13 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <string>First</string>
+  <string>Первый</string>
+  <string>1</string>
+  <string>Второй</string>
+  <string>6</string>
+  <string>Третий</string>
+  <string>2</string>
+  <string>Четвертый</string>
+  <string>2</string>
+  <string>Пятый</string>
   <string>4</string>
-  <string>Second</string>
-  <string>2</string>
-  <string>Third</string>
+  <string>Шестой</string>
   <string>3</string>
-  <string>Fourth</string>
+  <string>Седьмой</string>
   <string>2</string>
-  <string>Fifth</string>
+  <string>Восьмой</string>
+  <string>3</string>
+  <string>Девятый</string>
+  <string>3</string>
+  <string>Десятый</string>
   <string>2</string>
 </root>

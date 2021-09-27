@@ -9,11 +9,16 @@ namespace SerializationAndDeserialization
         static void Main(string[] args)
         {
             List list = new List();
-            list.Insert("First");
-            list.Insert("Second");
-            list.Insert("Third");
-            list.Insert("Fourth");
-            list.Insert("Fifth");
+            list.Insert("Первый");
+            list.Insert("Второй");
+            list.Insert("Третий");
+            list.Insert("Четвертый");
+            list.Insert("Пятый");
+            list.Insert("Шестой");
+            list.Insert("Седьмой");
+            list.Insert("Восьмой");
+            list.Insert("Девятый");
+            list.Insert("Десятый");
             list.Random();
 
             Serializer listSerializer = new Serializer();
