@@ -1,4 +1,5 @@
-﻿namespace SerializationAndDeserialization
+﻿
+namespace SerializationAndDeserialization
 {
     public class ListNode
     {
@@ -9,6 +10,6 @@
         public ListNode Random;
 
         public string Data;
-
+        
     }
 }

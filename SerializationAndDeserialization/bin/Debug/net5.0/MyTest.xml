@@ -1,1 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8"?><root><string>First</string><string>null</string><string>Second</string><string>Second</string><string>===</string><string>Second</string><string>First</string><string>Third</string><string>Fifth</string><string>===</string><string>Third</string><string>Second</string><string>Fourth</string><string>Third</string><string>===</string><string>Fourth</string><string>Third</string><string>Fifth</string><string>Third</string><string>===</string><string>Fifth</string><string>Fourth</string><string>null</string><string>Second</string><string>===</string></root>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <string>First</string>
+  <string>4</string>
+  <string>Second</string>
+  <string>2</string>
+  <string>Third</string>
+  <string>3</string>
+  <string>Fourth</string>
+  <string>2</string>
+  <string>Fifth</string>
+  <string>2</string>
+</root>

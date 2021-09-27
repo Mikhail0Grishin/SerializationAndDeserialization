@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SerializationAndDeserialization
 {
-    class List
+    public class List
     {
         private int count = 0;
         private ListNode Head { get; set; }
@@ -85,6 +85,5 @@ namespace SerializationAndDeserialization
             }    
             return randomNode;
         }
-
     }
 }

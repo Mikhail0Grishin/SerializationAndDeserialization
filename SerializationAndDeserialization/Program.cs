@@ -16,16 +16,15 @@ namespace SerializationAndDeserialization
             list.Insert("Fifth");
             list.Random();
 
-            Serializer serializer = new Serializer();
+            Serializer listSerializer = new Serializer();
+
             //Stream fStream = new FileStream("MyTest.xml",
             //    FileMode.Create, FileAccess.Write, FileShare.None);
+            //listSerializer.Serialize(ref head, fStream);
 
-            //serializer.Serialize(list.GetHead(), fStream);
-
-
-            List deserializedList = new List();
+            List newList = new List();
             Stream fStream = File.OpenRead("MyTest.xml");
-            deserializedList.SetHead(serializer.Deserialaze(fStream));
+            newList.SetHead(listSerializer.Deserialize(fStream));
             Console.WriteLine("Complete");
             Console.Read();
         }

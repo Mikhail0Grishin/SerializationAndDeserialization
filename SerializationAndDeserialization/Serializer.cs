@@ -1,92 +1,102 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Threading.Tasks;
+using System.Linq;
 using System.Xml;
 using System.Xml.Serialization;
 
-
 namespace SerializationAndDeserialization
 {
-    class Serializer : IListSerializer
+    public class Serializer
     {
-        public void Add(ListNode head, ListNode tail, string data)
+        ListNode Head = new ListNode();
+        ListNode Tail = new ListNode();
+        int id = 0;
+        public ListNode GetNode(int id)
         {
-            ListNode node = new ListNode() { Data = data };
+            for (ListNode curr = Head; curr.Next != null; curr = curr.Next)
+            {
+                if (this.id == id)
+                    return curr;
+                this.id++;
+            }
 
-            if (head == null)
-            {
-                head = node;
-            }
-            else
-            {
-                tail.Next = node;
-                node.Previous = tail;
-            }
-            tail = node;
+            return Tail;
         }
-        public ListNode Deserialaze(Stream s)
+        public void Serialize(ref ListNode head,Stream s)
+        { 
+            int index = 0;
+            Dictionary<ListNode, int> dict = new Dictionary<ListNode, int>();
+            for (ListNode currNode = Head; currNode != null; currNode = currNode.Next)
+            {
+                dict.Add(currNode, index);
+                index++;
+            }
+
+            var settings = new XmlWriterSettings { Indent = true };
+            var writer = XmlWriter.Create(s, settings);
+
+            writer.WriteStartElement("root");
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(string));
+            XmlSerializer xmlSerializerInt = new XmlSerializer(typeof(int));
+
+            for (ListNode currNode = Head; currNode != null; currNode = currNode.Next)
+            {
+                xmlSerializer.Serialize(writer, currNode.Data);
+                xmlSerializer.Serialize(writer, dict[currNode.Random]);
+            }
+
+            writer.Close();
+        }
+
+        public ListNode Deserialize(Stream s)
         {
-            ListNode head = null;
-            ListNode tail = null;
-            ListNode node = new ListNode();
+            int randomId;
+            int count = 0;
+            int index = 0;
+            Dictionary<int, Tuple<string, int>> dict = new Dictionary<int, Tuple<string, int>>();       
 
             var reader = XmlReader.Create(s);
             reader.ReadToFollowing("string");
 
-            XmlSerializer xmlSerializer = new XmlSerializer(typeof(String)); 
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(string));
 
-            while (reader.Read())
+            String data = (String)xmlSerializer.Deserialize(reader);
+            String randomid = (String)xmlSerializer.Deserialize(reader);
+            randomId = Convert.ToInt32(randomid) - 1;
+
+            while (data != null || randomid != null)
             {
+                dict.Add(count, new Tuple<string, int>(data, randomId));
+                data = (String)xmlSerializer.Deserialize(reader);
+                randomid = (String)xmlSerializer.Deserialize(reader);
+                randomId = Convert.ToInt32(randomid) - 1;
+                count++;
             }
 
-            return head;
-        }
-
-        public void Serialize(ListNode head, Stream s)
-        {
-            string probel = "===";
-
-            ListNode node = head;
-            string ToString(ListNode node)
+            ListNode currNode = Head;
+            for (int i = 0; i < count; i++)
             {
-                return node.Data;
-            }
-
-            var settings = new XmlWriterSettings {};
-            var writer = XmlWriter.Create(s, settings);
-
-            writer.WriteStartElement("root");
-
-            XmlSerializer xmlSerializer = new XmlSerializer(typeof(String));
-            XmlSerializer xmlSerializerNode = new XmlSerializer(typeof(ListNode));
-
-            while (node != null)
-            {
-                xmlSerializer.Serialize(writer, node.Data);
-                if (node.Previous != null)
+                currNode.Data = dict.ElementAt(i).Value.Item1;
+                currNode.Next = new ListNode();
+                if (i != count - 1)
                 {
-                    xmlSerializer.Serialize(writer, ToString(node.Previous));
+                    currNode.Next.Previous = currNode;
+                    currNode = currNode.Next;
                 }
                 else
                 {
-                    xmlSerializer.Serialize(writer, "null");
-                }         
-                if (node.Next != null)
-                {
-                    xmlSerializer.Serialize(writer, ToString(node.Next));
+                    Tail = currNode;
                 }
-                else
-                {
-                    xmlSerializer.Serialize(writer, "null");
-                }
-                xmlSerializer.Serialize(writer, ToString(node.Random));
-                xmlSerializer.Serialize(writer, probel);
-
-                node = node.Next;
+            }
+            index = 0;
+            for (ListNode curr = Head; curr.Next != null; curr = curr.Next)
+            {
+                curr.Random = GetNode(dict.ElementAt(index).Value.Item2);
+                index++;
             }
 
-            writer.Close();
+            return Head;
         }
     }
 }
